@@ -8,7 +8,7 @@ function onClick() {
     var username = $("#name").val().trim();
     $("#repositories").empty();
 
-    if (username == "") {
+    if (username === "") {
         alert("Please enter a username");
         return;
     }

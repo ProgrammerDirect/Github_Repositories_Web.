@@ -1,4 +1,8 @@
 
+function onError() {
+    alert("User not found or GitHub API is not working properly.");
+}
+
 
 function onClick() {
     var username = $("#name").val().trim();
@@ -17,20 +21,25 @@ function onClick() {
                 for (var i = 0; i < showrepositories.length; i++)
                 {
                     var repository = showrepositories[i];
+                    var textDescription = repository.description;
+
+                    if (repository.description == null)
+                    {
+                        textDescription = "No description";
+                    }
 
                     var fila =
                         "<tr>" +
                             "<td>" + repository.name + "</td>" +
-                            "<td>" + repository.description + "</td>" +
+                            "<td>" + textDescription + "</td>" +
                             "<td> "+ repository.stargazers_count + "</td>" +
                         "</tr>";
                     $("#repositories").append(fila);
                 }
 
-
             }
 
-    });
+    }).fail(onError);
 }
 
 function onReady() {

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My first web</title>
+    <!-- Conexión con Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
+</head>
+
+<body class="bg-light p-4">
+<div class="container bg-white p-4 rounded shadow-sm">
+
+    <h1> Discovering GitHub Repositories! </h1>
+    <img src = "https://devologyx.io/wp-content/uploads/2023/07/github-cover.jpeg" width = "400" height = "200" class="rounded" alt="Cinque Terre"/>
+    <p> </p>
+    <h2> Insert Github Name </h2>
+
+    <p> Over the next parameter insert the name of the user you would like to know what repositories has in his/her possession. </p>
+
+    <p> If you need to make a browse first: <a target = "blank" href="http://www.google.com" > Go to Google </a> </p>
+
+    <div class="mb-3 mt-3">
+
+            <label for = "name" class = "form-label fw-bold"> Name </label>
+            <input type= "text" class = "form-control" id = "name" name ="name" placeholder = "Enter GitHub Username"/>
+            <br>
+            <button type="button" id="btn-search" class="btn btn-primary">Search Repositories</button>
+
+
+    </div>
+
+    <!-- Ahora quiero separar secciones en vez de hacer dos webs, es solo un comentario -->
+    <hr>
+    <p> GitHub <span style="color: blue"> Name </span>: </p>
+
+    <h2> Repositories </h2>
+    <table class="table table-striped table-hover mt-3">
+
+        <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Stars</th>
+        </tr>
+
+        </thead>
+
+        <tbody id="repositories">
+        <!--<Now we will need the help of JQuery -->
+
+        </tbody>
+
+    </table>
+
+    <footer>
+        <p> Copyright 2026 </p>
+    </footer>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script/script.js"></script>
+
+
+</body>
+
+</html>
+
+
